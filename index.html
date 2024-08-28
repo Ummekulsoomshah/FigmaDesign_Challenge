@@ -8,17 +8,37 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="navbar">
         <div class="img">
             <img src="images/brand_logo.png" alt="">
         </div>
-        <div class="linkpages">
-            <a href="">MENU</a>
-            <a href="">LOCATION</a>
-            <a href="">ABOUT</a>
-            <a href="">CONTACT</a>
+        <div id="menuicon">
+           <button id="menubtn" ><i class="fa-solid fa-bars"></i></button> 
+        </div>
+        <div class="linkpages" id="linkthepages">
+            <div id="closeicon">
+                <button id="closebtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="menuitem">
+                <a href="">MENU</a>
+            </div>
+            <div class="menuitem">
+                <a href="">LOCATION</a>
+            </div>
+            <div class="menuitem">
+                <a href="">ABOUT</a>
+            </div>
+            <div class="menuitem">
+                <a href="">CONTACT</a>
+            </div>
+            <div class="menuitem">
+                <a href="" id="loginanc">LOGIN</a>
+            </div>
         </div>
         <div class="log">
             <button>LOGIN</button>
@@ -51,5 +71,24 @@
                 <img class="rightimg" src="images/shoe_image.png" alt="">
         </div>
     </div>
+    <script>
+        let menubtn = document.getElementById("menubtn");
+menubtn.onclick = function() {
+    console.log("action");
+    document.getElementById("linkthepages").style.display = "block";
+    document.getElementById("menuicon").style.display = "none";
+    document.getElementById("closeicon").style.display = "block";
+
+
+    console.log("action1");
+};
+let closebtn=document.getElementById("closebtn");
+closebtn.onclick=function(){
+    document.getElementById("linkthepages").style.display = "none";
+    document.getElementById("menuicon").style.display = "block";
+    document.getElementById("closeicon").style.display = "none";
+}
+
+    </script>
 </body>
 </html>
